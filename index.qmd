@@ -1,0 +1,94 @@
+---
+title: "Welcome to my website!"
+format: html
+css: styles-home.css
+---
+
+```{=html}
+<div class="center-text">
+  <div class="typing-wrapper">
+    <span class="typing-effect" aria-live="polite"></span><span class="cursor">|</span>
+  </div>
+</div>
+
+<script>
+const texts = [
+  "Hi there! I'm Anna.",
+  "Human-centered.",
+  "Tech-curious.",
+  "Nature-driven."
+];
+
+let index = 0;
+let isErasing = false;
+const typingSpeed = 100;
+const erasingSpeed = 50;
+const delayBetweenTexts = 2000;
+const element = document.querySelector('.typing-effect');
+
+function type() {
+  const currentText = texts[index];
+  const displayedText = element.textContent;
+
+  if (!isErasing) {
+    element.textContent = currentText.substring(0, displayedText.length + 1);
+    if (displayedText.length + 1 === currentText.length) {
+      isErasing = true;
+      setTimeout(type, delayBetweenTexts);
+    } else {
+      setTimeout(type, typingSpeed);
+    }
+  } else {
+    element.textContent = currentText.substring(0, displayedText.length - 1);
+    if (displayedText.length === 0) {
+      isErasing = false;
+      index = (index + 1) % texts.length;
+      setTimeout(type, typingSpeed);
+    } else {
+      setTimeout(type, erasingSpeed);
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(type, typingSpeed);
+});
+</script>
+
+<style>
+/* A teljes blokk vízszintesen középre */
+.center-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem; /* finom felső távolság */
+}
+
+/* Gépelt szöveg stílusa */
+.typing-wrapper {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  color:  #82CAFF;
+  background-color: #111;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Kurzor stílusa */
+.cursor {
+  display: inline-block;
+  width: 1px;
+  height: 1.2rem;
+  background-color:  #82CAFF;
+  margin-left: 3px;
+  animation: blink 1s steps(2, start) infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+</style>
+```
