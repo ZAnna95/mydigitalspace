@@ -1,50 +1,192 @@
-/* Styling for the body, setting up the background image */
+/* Quarto által generált title elrejtése */
+.quarto-title-block {
+  display: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 body {
-    background-image: url('image/annaszem.jpg'); /* Ensure the path is correct */
-    background-size: cover; /* Cover the entire area of the element */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-attachment: fixed; opacity: 8; /* A kép átlátszósága */
-    
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: url('image/annaszem.jpg') center/cover no-repeat fixed;
+  overflow-x: hidden;
+}
+
+/* Hero wrapper: teljes képernyő, reszponzív */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Floating card: reszponzív, üveg effekt */
+/* Import betűtípus (pl. Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a; /* Sötét alap, a kék kiemeléshez */
+  color: white;
+}
+
+/* Floating card: reszponzív, üveg effekt */
+.hero-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.5s ease forwards;
 }
 
 
-
-h1 {
-    color: black; /* A cím színe */
-    font-size: 2.5em; /* A cím mérete */
-    text-align: center; /* Középre igazítás */
-    margin-top: 200px !important; /* Felső margó, amely lejjebb tolja a címet */
+/* Welcome szöveg */
+.hero-card h1 {
+  font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
+  margin-bottom: 20px;
+  font-weight: 400px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(130, 202, 255, 0.6); /* Finom kék glow */
+  letter-spacing: 1px;
 }
 
-
-
-
-
-
-
-/* Halványító réteg a háttérképen */
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.45); /* Fehér overlay 60% opacity */
-    z-index: 0; /* Az overlay a háttérkép felett, de a tartalom alatt van */
+/* Paragrafus */
+.hero-card p {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.3rem);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #f0f0f0;
 }
 
-/* Tartalom */
-.content {
-    position: relative;
-    z-index: 1; /* A szöveg az overlay felett jelenik meg */
+/* Glow gomb: kék szín */
+.hero-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff !important; /* Szöveg mindig fehér */
+  background: #82CAFF; /* Alap szín */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: kicsit sötétebb háttér, fehér szöveg marad */
+.hero-button:hover {
+  background: #5DB5E6;
+  box-shadow: 0 6px 18px rgba(93, 181, 230, 0.5);
+  transform: scale(1.05);
+  color: #fff !important; /* Szöveg mindig fehér */
+}
+
+/* Active: még sötétebb háttér, fehér szöveg marad */
+.hero-button:active {
+  background: #3C9BD6;
+  transform: scale(0.98);
+  box-shadow: 0 4px 12px rgba(60, 155, 214, 0.4);
+  color: #fff !important; /* Szöveg mindig fehér */
+}
+/* Animáció */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Reszponzív finomhangolás */
+@media (max-width: 600px) {
+  .hero-card {
     padding: 20px;
-    color: black; /* Szöveg színe */
+  }
+  
+  .hero-card h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Fade-in animáció */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+  min-height: 100vh;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Háttérkép optimalizálása mobilra */
+
+
+@media (max-width: 768px) {
+  .hero-card {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .hero-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-card p {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+.typing {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #82CAFF; /* Villogó kurzor */
+  font-size: 1.2rem;
+  animation: typing 4s steps(40, end) infinite, blink 0.8s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 
 
+.typing-effect {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #82CAFF; /* egyetlen kék kurzor */
+  animation: blink 1s step-end infinite;
+}
 
-
-
+@keyframes blink {
+  50% { border-color: transparent; }
+}
