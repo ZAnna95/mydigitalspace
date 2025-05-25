@@ -147,9 +147,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="center-text">
-  <div class="typing-wrapper">
-    <span class="typing-effect" aria-live="polite"></span><span class="cursor">|</span>
+
+<div class="hero">
+  <div class="hero-card">
+    <h1>Welcome to My Digital Space</h1>
+    <p><span class="typing-effect"></span></p>
+    <a href="about.html" class="hero-button">Discover More</a>
   </div>
 </div>
 
@@ -163,9 +166,9 @@ const texts = [
 
 let index = 0;
 let isErasing = false;
-const typingSpeed = 100;
-const erasingSpeed = 50;
-const delayBetweenTexts = 2000;
+const typingSpeed = 120;
+const erasingSpeed = 60;
+const delayBetweenTexts = 1500;
 const element = document.querySelector('.typing-effect');
 
 function type() {
@@ -197,42 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<style>
-/* A teljes blokk vízszintesen középre */
-.center-text {
-  display: flex;
-  justify-content: center;
-  margin-top: 4rem; /* finom felső távolság */
-}
 
-/* Gépelt szöveg stílusa */
-.typing-wrapper {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.2rem;
-  color:  #82CAFF;
-  background-color: #111;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-/* Kurzor stílusa */
-.cursor {
-  display: inline-block;
-  width: 1px;
-  height: 1.2rem;
-  background-color:  #82CAFF;
-  margin-left: 3px;
-  animation: blink 1s steps(2, start) infinite;
-  vertical-align: middle;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-</style>
 
 
 
