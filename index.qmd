@@ -55,6 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<div class="custom-footer">
+  © 2025 Anna Zambo · <a href="Privacy Policy.html">Privacy Policy</a>
+</div>
+
+</div>
+
 <style>
 /* A teljes blokk vízszintesen középre */
 .center-text {
