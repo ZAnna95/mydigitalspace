@@ -1,0 +1,68 @@
+---
+title: "Privacy Policy"
+format: html
+page-layout: full
+---
+
+*Last updated: August 2025*
+
+Thank you for visiting my personal website. Your privacy matters, and I want to be transparent about what happens (or doesn't happen) with your data here.
+
+------------------------------------------------------------------------
+
+### 1. Purpose of This Website
+
+This website exists solely to present my personal and professional journey in a creative, digital format. It is a portfolio and blog — a space where I share ideas, projects, and perspectives.
+
+------------------------------------------------------------------------
+
+### 2. No Cookies, No Tracking, No Embedded Services
+
+This website:
+
+-   does **not** use cookies\
+-   does **not** include third-party trackers (e.g., Google Analytics, Facebook Pixel)\
+-   does **not** embed social media widgets, YouTube videos, or ads
+
+You are not being followed here. Just scroll and read freely. 😊
+
+------------------------------------------------------------------------
+
+### 3. External Links
+
+Occasionally, I may reference external sources or articles, always citing the original source.\
+When clicking on such links, you are leaving this site, and the privacy policies of the external providers will apply.
+
+------------------------------------------------------------------------
+
+### 4. Hosting & Technical Data
+
+This website is hosted on **GitHub Pages**.
+
+When you visit the site, GitHub automatically stores **technical data** in server logs — such as your IP address, browser type, date and time of access.\
+These logs are standard and used solely for the secure operation of the website.\
+I do not access, collect, or analyze this information myself.
+
+------------------------------------------------------------------------
+
+### 5. Use of Artificial Intelligence
+
+While I occasionally use **AI tools** for creative and technical work,\
+this website does **not use AI to process visitor data**, and no AI features are running on the site.\
+There is no personalization, tracking, or AI-driven analysis of any kind.
+
+------------------------------------------------------------------------
+
+### 6. Contact
+
+You can reach me at:\
+**Anna Zambo**\
+📧 annazambo95\@gmail.com
+
+If you contact me, your information will only be used to reply, and will never be shared or stored for any other purpose.
+
+------------------------------------------------------------------------
+
+If you have questions about this policy, feel free to reach out.
+
+This site is designed to be simple, respectful, and privacy-friendly — because that’s how the internet *should* be.
