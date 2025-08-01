@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   © 2025 Anna Zambo · <a href="Privacy Policy.html">Privacy Policy</a>
 </div>
 
-</div>
+
 
 <style>
 /* A teljes blokk vízszintesen középre */
