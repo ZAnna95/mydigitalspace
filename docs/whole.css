@@ -98,5 +98,42 @@ a:hover {
   cursor: pointer;
 }
 
+/* === MINIMALISTA, FEHÉR FOOTER, HALVÁNY VONALLAL === */
+
+.custom-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff; /* fehér szöveg */
+  padding: 1.2rem 0 1rem 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  opacity: 0.9;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Rövid, vékony vonal a szöveg felett */
+.custom-footer::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4); /* halvány fehér */
+  margin: 0 auto 1rem auto;
+}
+
+/* Linkek stílusa */
+.custom-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.custom-footer a:hover {
+  opacity: 0.6;
+}
 
 
