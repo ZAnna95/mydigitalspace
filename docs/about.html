@@ -276,7 +276,6 @@ ul.task-list li input[type="checkbox"] {
 
     .blog-btn:hover {
       background-color: var(--blue-hover);
-      color: white !important;
     }
 
     .cv-btn {
@@ -314,25 +313,28 @@ ul.task-list li input[type="checkbox"] {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 14px;
+      gap: 18px;
     }
 
     .skills-list span {
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 12px 24px;
-      border-radius: 24px;
-      box-shadow: var(--shadow-glass);
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px 22px;
+      border-radius: 18px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
       font-size: 15px;
-      font-weight: 700;
-      color: #444;
+      font-weight: 600;
+      color: #333;
+      border: 1.5px solid var(--lightblue);
     }
 
     .skills-list span:hover {
       transform: scale(1.05);
-      background-color: rgba(255, 255, 255, 1);
-      box-shadow: 0 0 0 3px var(--blue), var(--shadow-btn);
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 0 0 2px var(--blue), 0 8px 20px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
     }
 
     .hobbies {
@@ -436,7 +438,7 @@ ul.task-list li input[type="checkbox"] {
 
       .skills-list span {
         font-size: 14px;
-        padding: 10px 20px;
+        padding: 10px 18px;
       }
     }
   </style>
@@ -448,7 +450,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="images/annaz.jpeg" alt="Anna Zambó" class="profile-img">
     <h1 class="headline">Hello, I'm Anna</h1>
     <p class="intro-text">
-      I am passionate about strategic communication, sustainability, and the digital world, with a special interest in new technologies, artificial intelligence, and meaningful design. I consider myself a creative and open-minded person, always eager to learn and explore new things.
+      I am passionate about strategic communication, sustainability, and the digital world, with a special interest in new technologies, artificial intelligence, and meaningful design.
     </p>
     <p class="intro-text">
       That’s why I decided to start this blog — to reflect on the topics that inspire me, share insights, and document my learning journey at the intersection of communication, innovation, and design in the age of emerging technologies.
@@ -457,11 +459,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="buttons">
       <a href="./projects.html" class="btn blog-btn">Visit the Blog</a>
       <a href="https://www.linkedin.com/in/anna-zambo-059970230" class="btn linkedin-btn" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn icon" style="width: 20px; height: 20px; filter: invert(1); margin-right: 8px; vertical-align: middle;">
-  LinkedIn
-</a>
-
-
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn icon" style="width: 20px; height: 20px; filter: invert(1); margin-right: 8px; vertical-align: middle;">
+        LinkedIn
+      </a>
     </div>
   </section>
 
@@ -472,10 +472,11 @@ ul.task-list li input[type="checkbox"] {
       <span>AI Tools</span>
       <span>R &amp; RStudio</span>
       <span>Web Design</span>
+      <span>GitHub</span>
       <span>Sustainability Communication</span>
       <span>WordPress &amp; Canva</span>
       <span>Digital Trends &amp; Futures Thinking</span>
-      <span>SQL Basics</span>
+      <span>Python Basics</span>
     </div>
   </section>
 
@@ -507,6 +508,7 @@ ul.task-list li input[type="checkbox"] {
 <footer>
   Created by Anna Zambó © 2025
 </footer>
+
 
 
 
