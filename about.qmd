@@ -4,19 +4,325 @@ format: html
 css: styles-about.css
 ---
 
-::: container
-![](images/WhatsApp%20Image%202025-05-21%20at%2010.29.17.jpeg){.profile-img}
+```{=html}
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Anna Zambo | Végleges verzió</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #ffafaf;
+            --blue: #88cfff;
+            --linkedin-blue: #0077B5;
+            --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            --shadow-btn: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --border-radius-main: 24px;
+        }
 
-**Hi, I'm Anna,** **a Hungarian living in Vienna 👋 — *I’m glad you’re here.***
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: #fff;
+            background-image:
+                radial-gradient(circle, var(--pink) 2.5px, transparent 2.5px),
+                radial-gradient(circle, var(--blue) 2.5px, transparent 2.5px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            color: #222;
+        }
 
-\
-I started this blog out of curiosity — to explore how climate, AI, society and tech intersect, and to share content that can raise awareness, spark action, or question the status quo.
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-I’m a human-centered communicator and strategy nerd with a background in international relations, linguistics, and data-driven innovation. I’ve worked across the humanitarian world, startup ecosystems, and the corporate universe — always looking for the sweet spot where curiosity, empathy, and impact meet.
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 100px 20px 60px;
+            text-align: center;
+            /* Eltávolítva: háttér, border, box-shadow */
+            margin: 0; /* Margin is eltávolítva, így a tartalom a szélekig ér */
+            overflow: hidden;
+            position: relative;
+        }
 
-I hope you enjoy poking around here. Have fun — and if something sparks your mind, let’s connect 🚀
+        ---
+.profile-img {
+    width: 400px; /* A kép szélessége 400px lesz */
+    height: 400px; /* A kép magassága 400px lesz */
+    border-radius: 16px;
+    border: 6px solid var(--blue);
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
 
-<a href="https://www.linkedin.com/in/anna-zambo-059970230/"class="linkedin-button"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo"/> Get in touch </a>
-:::
+.profile-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
 
-------------------------------------------------------------------------
+/* ... a többi kód változatlan ... */
+
+@media (max-width: 768px) {
+    .hero { padding: 60px 15px 30px; margin: 0 0; }
+    .headline { font-size: 42px; }
+    .profile-img {
+        width: 300px; /* Kisebb képernyőn 300px lesz */
+        height: 300px;
+    }
+    .intro-text { font-size: 16px; }
+    .btn { font-size: 15px; padding: 12px 24px; }
+    .buttons { flex-direction: column; align-items: stretch; }
+    .skills h2, .hobbies h2 { font-size: 36px; }
+    .skills-list span { font-size: 14px; padding: 10px 20px; }
+}
+
+        .headline {
+            font-family: 'Dancing Script', cursive;
+            font-size: 56px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .intro-text {
+            font-size: 18px;
+            font-weight: 400;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            white-space: nowrap;
+            box-shadow: var(--shadow-btn);
+        }
+        
+        .btn, .btn:visited, .btn:hover, .btn:active, .btn:focus {
+            color: white !important;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-btn { background-color: var(--pink); }
+        .blog-btn:hover { background-color: #e59393; }
+
+        .cv-btn { background-color: var(--blue); }
+        .cv-btn:hover { background-color: #66b2e1; }
+        
+        .linkedin-btn { background-color: var(--linkedin-blue); }
+        .linkedin-btn:hover { background-color: #005f93; }
+
+        .skills {
+            text-align: center;
+            margin: 60px auto 40px;
+            max-width: 900px;
+        }
+
+        .skills h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 44px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 24px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .skills-list span {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 12px 24px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-glass);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 700;
+            color: #444;
+        }
+
+        .skills-list span:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 0 3px var(--blue), var(--shadow-btn);
+        }
+
+        .hobbies {
+            text-align: center;
+            margin: 60px auto 40px;
+            max-width: 900px;
+        }
+
+        .hobbies h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 44px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 24px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .hobby-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .hobby-item {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: var(--border-radius-main);
+            box-shadow: var(--shadow-glass);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hobby-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hobby-item .img-wrapper {
+             width: 100%;
+             height: 200px;
+             overflow: hidden;
+             border-radius: 12px;
+             margin-bottom: 15px;
+}
+        
+        .hobby-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hobby-item p {
+            font-size: 16px;
+            font-weight: 600;
+            color: #444;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 13px;
+            margin: 50px auto 30px;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 60px 15px 30px; margin: 0 0; }
+            .headline { font-size: 42px; }
+            .profile-img { width: 220px; height: 220px; }
+            .intro-text { font-size: 16px; }
+            .btn { font-size: 15px; padding: 12px 24px; }
+            .buttons { flex-direction: column; align-items: stretch; }
+            .skills h2, .hobbies h2 { font-size: 36px; }
+            .skills-list span { font-size: 14px; padding: 10px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="container">
+    <section class="hero">
+        <img src="images/annaz.jpeg" alt="Anna Zambo" class="profile-img">
+        <h1 class="headline">Hello, I'm Anna</h1>
+        <p class="intro-text">
+  I am passionate about strategic communication, sustainability, and the digital world, with a special interest in new technologies, artificial intelligence, and meaningful design. I consider myself a creative and open-minded person, always eager to learn and explore new things.
+</p>
+
+<p class="intro-text">
+  That’s why I decided to start this blog — to reflect on the topics that inspire me, share insights, and document my learning journey at the intersection of communication, innovation, and design in the age of emerging technologies.
+</p>
+
+
+    <div class="buttons">
+      <a href="projects.qmd" class="btn blog-btn">Visit the Blog</a>
+      <a href="https://www.linkedin.com/in/anna-zambo-059970230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="btn linkedin-btn" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>My Skills</h2>
+    <div class="skills-list">
+      <span>Prompt Engineering</span>
+      <span>AI Tools</span>
+      <span>R & RStudio</span>
+      <span>Web Design</span>
+      <span>Sustainability Communication</span>
+      <span>WordPress & Canva</span>
+      <span>Digital Trends & Futures Thinking</span>
+      <span>SQL Basics</span>
+    </div>
+  </section>
+
+  <section class="hobbies">
+    <h2>My Hobbies</h2>
+    <div class="hobby-grid">
+      <div class="hobby-item">
+        <div class="img-wrapper">
+          <img src="images/climbing.jpeg" alt="Hiking">
+        </div>
+        <p>Bouldering</p>
+      </div>
+      <div class="hobby-item">
+        <div class="img-wrapper">
+          <img src="images/drawing2.jpeg" alt="Reading">
+        </div>
+        <p>Drawing</p>
+      </div>
+      <div class="hobby-item">
+        <div class="img-wrapper">
+          <img src="images/concert.jpeg" alt="Photography">
+        </div>
+        <p>Concerts</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+    Created by Anna Zambó © 2025
+</footer>
+
+</body>
+</html>
+```
