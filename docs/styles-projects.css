@@ -10,3 +10,54 @@
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
+/* TOC - dark with light text and bright hover (custom for Lux theme) */
+/* TOC sötétszürke háttérrel */
+#TOC, .toc {
+  background-color: #212529;
+  color: #cccccc;
+  padding: 20px;
+  border-radius: 16px;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* TOC címsor */
+#TOC h2, .toc-title {
+  color: #cccccc;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Lista */
+#TOC ul, .toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Listaelemek */
+#TOC li, .toc li {
+  margin: 10px 0;
+}
+
+/* Alap linkstílus */
+#TOC a, .toc a {
+  color: #cccccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+/* Hover, aktív, fókusz – mindig világoskék */
+#TOC a:hover,
+#TOC a:focus,
+#TOC a:active,
+#TOC a.nav-link.active,
+.toc a:hover,
+.toc a:focus,
+.toc a:active,
+.toc a.nav-link.active {
+  color: #82CAFF !important;
+}
